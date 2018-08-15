@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha schema/**/*.spec.js",
+    "test-api": "mocha --timeout 50000 tests/api/server.spec.js"
   },
   "author": "",
   "license": "",
@@ -19,6 +20,11 @@
     "request-promise": "4.2.2"
   },
   "devDependencies": {
-    "nodemon": "1.18.3"
+    "babel-register": "6.26.0",
+    "chai": "4.1.2",
+    "mocha": "5.2.0",
+    "nodemon": "1.18.3",
+    "sinon": "6.1.5",
+    "sinon-chai": "3.2.0"
   }
 }
